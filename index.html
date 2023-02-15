@@ -12,7 +12,7 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
 
-    <title>스파르타코딩클럽 | 1주차 숙제</title>
+    <title>스파르타코딩클럽 | 2주차 숙제</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 
@@ -84,11 +84,20 @@
             margin-right: 10px;
         }
     </style>
+    <script>
+        $(document).ready(function () {
+            fetch("http://spartacodingclub.shop/sparta_api/weather/seoul").then(res => res.json()).then(data => {
+                let number = data['temp']
+                $('#temp').text(number)
+            })
+        })
+    </script>
 </head>
 
 <body>
     <div class="mytitle">
         <h1>인생이 영화처럼 흘러가면 큰일나려나...</h1>
+        <div>현재 서울의 날씨 : <span id="temp">20</span>도</div>
         <button>그래도 영화가 좋다.</button>
     </div>
     <div class="mypost">
@@ -120,8 +129,7 @@
         <div class="row row-cols-1 row-cols-md-4 g-4">
             <div class="col">
                 <div class="card h-100">
-                    <img src="http://t1.daumcdn.net/cfile/153C46484EC4B6490A"
-                        class="card-img-top" alt="...">
+                    <img src="http://t1.daumcdn.net/cfile/153C46484EC4B6490A" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">우리는 동물원을 샀다</h5>
                         <p class="card-text">20초의 용기를 내면 반드시 좋은 일이 일어날 것이다.</p>
@@ -132,8 +140,8 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="http://t1.daumcdn.net/movie/c27bde87b19a727d44622dd3b6d0234c1b33f544"
-                        class="card-img-top" alt="...">
+                    <img src="http://t1.daumcdn.net/movie/c27bde87b19a727d44622dd3b6d0234c1b33f544" class="card-img-top"
+                        alt="...">
                     <div class="card-body">
                         <h5 class="card-title">월터의 상상은 현실이 된다</h5>
                         <p class="card-text">내가 행동하지 않으면 아무것도 일어나지 않는다.</p>
@@ -144,20 +152,20 @@
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="http://t1.daumcdn.net/movie/fc6e8edb728db1ba65ea8283b287fb6d64571f40"
-                        class="card-img-top" alt="...">
+                    <img src="http://t1.daumcdn.net/movie/fc6e8edb728db1ba65ea8283b287fb6d64571f40" class="card-img-top"
+                        alt="...">
                     <div class="card-body">
                         <h5 class="card-title">리틀 포레스트 : 사계절</h5>
                         <p class="card-text">도망치지 말고 똑바로 직시하자.</p>
                         <p>⭐⭐⭐⭐⭐</p>
-                        <p class="mycomment">생각 비우고 싶을 때 보는 영화. 보면 귀농의 환상을 갖게 되지만 현실을 생각하면 역시 환상으로 남기는 것으로...음식 만드는 과정이 너무 좋다.</p>
+                        <p class="mycomment">생각 비우고 싶을 때 보는 영화. 보면 귀농의 환상을 갖게 되지만 현실을 생각하면 역시 환상으로 남기는 것으로...음식 만드는 과정이
+                            너무 좋다.</p>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="card h-100">
-                    <img src="http://t1.daumcdn.net/cfile/145ED61B4B704CE803"
-                        class="card-img-top" alt="...">
+                    <img src="http://t1.daumcdn.net/cfile/145ED61B4B704CE803" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">남극의 쉐프</h5>
                         <p class="card-text">역시 집 떠나면...고생이야...</p>
